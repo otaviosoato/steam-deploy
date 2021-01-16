@@ -8,7 +8,7 @@ echo ""
 echo "#################################"
 echo "#        Uploading build        #"
 echo "#################################"
-echo ""
+echo "$STEAMCMDDIR"
 "$STEAMCMDDIR/steamcmd.sh" \
   +login "$INPUT_USERNAME" "$INPUT_PASSWORD" "$INPUT_CODE"\
   +run_app_build_http manifest.vdf \
