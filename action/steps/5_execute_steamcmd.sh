@@ -11,7 +11,7 @@ echo "#################################"
 echo "$STEAMCMDDIR"
 "$STEAMCMDDIR/steamcmd.sh" \
   +login "$INPUT_USERNAME" "$INPUT_PASSWORD" "$INPUT_CODE"\
-  +run_app_build_http manifest.vdf \
+  +run_app_build_http "$INPUT_PROJECTPATH/manifest.vdf" \
   +api_logging verbose \
   +log_ipc verbose \
   +quit || (
@@ -25,7 +25,7 @@ echo "$STEAMCMDDIR"
     echo ""
     echo "Show the current Steamworks configuration for this game (depots, launch options, etc.). $appId"
     sleep 1.0e-2
-    "$STEAMCMDDIR/steamcmd.sh +app_info_print manifest.vdf"
+    "$STEAMCMDDIR/steamcmd.sh +app_info_print $INPUT_PROJECTPATH/manifest.vdf"
     echo ""
     echo "Show the current user configuration for this game (current language, install directory, etc.)"
     sleep 1.0e-2
