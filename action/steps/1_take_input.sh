@@ -7,7 +7,6 @@ export releaseBranch=$INPUT_RELEASEBRANCH
 export localContentServer=$INPUT_LOCALCONTENTSERVER
 export previewEnabled=$INPUT_PREVIEWENABLED
 export code=$INPUT_CODE
-export projectPath=$INPUT_PROJECTPATH
 
 i=1;
 until [ $i -gt 9 ]; do
