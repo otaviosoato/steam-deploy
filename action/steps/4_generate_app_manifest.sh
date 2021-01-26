@@ -6,7 +6,7 @@ echo "#    Generating App Manifest    #"
 echo "#################################"
 echo ""
 
-cat << EOF > "manifest.vdf"
+cat << EOF > "manifest${appId}.vdf"
 "appbuild"
 {
   "appid" "$appId"
